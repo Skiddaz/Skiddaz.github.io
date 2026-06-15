@@ -12,11 +12,12 @@ body {
     font-family: Tahoma, Verdana, sans-serif;
     background-color: #121212;
     color: #ffffff;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
+    padding: 20px;
 }
 
 .container {
@@ -24,6 +25,8 @@ body {
     padding: 40px;
     border: 2px solid #333333;
     background-color: #1a1a1a;
+    width: 100%;
+    max-width: 600px;
 }
 
 h1 {
@@ -39,4 +42,39 @@ h1 {
     font-size: 0.9rem;
     color: #888888;
     letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.member img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #333333;
+    margin-bottom: 10px;
+}
+
+.member .name {
+    font-size: 0.8rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.member .role {
+    font-size: 0.7rem;
+    color: #666666;
+    text-transform: lowercase;
 }
